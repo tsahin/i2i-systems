@@ -1,1 +1,1 @@
-# Stajda yaptıgım ödevler
+##Exercises
