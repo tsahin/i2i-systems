@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="2903fa40-75c1-4ca0-8e2a-4d7582137eb9" activeEnvironment="Default" name="CalculatorWebServiceImpl?wsdl" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="8bc92ed5-671a-47bc-bb20-57db98adb526" wsaVersion="NONE" name="CalculatorWebServiceImplSoapBinding" type="wsdl" bindingName="{http://services.calculator.com}CalculatorWebServiceImplSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8070/CalculatorWebService/services/CalculatorWebServiceImpl?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8070/CalculatorWebService/services/CalculatorWebServiceImpl?wsdl"><con:part><con:url>http://localhost:8070/CalculatorWebService/services/CalculatorWebServiceImpl?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://services.calculator.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://services.calculator.com" xmlns:intf="http://services.calculator.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+  <wsdl:types>
+    <schema elementFormDefault="qualified" targetNamespace="http://services.calculator.com" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="addition">
+        <complexType>
+          <sequence>
+            <element name="first_parameter" type="xsd:double"/>
+            <element name="second_parameter" type="xsd:double"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="additionResponse">
+        <complexType>
+          <sequence>
+            <element name="additionReturn" type="xsd:double"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="division">
+        <complexType>
+          <sequence>
+            <element name="first_parameter" type="xsd:double"/>
+            <element name="second_parameter" type="xsd:double"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="divisionResponse">
+        <complexType>
+          <sequence>
+            <element name="divisionReturn" type="xsd:double"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="subtraction">
+        <complexType>
+          <sequence>
+            <element name="first_parameter" type="xsd:double"/>
+            <element name="second_parameter" type="xsd:double"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="subtractionResponse">
+        <complexType>
+          <sequence>
+            <element name="subtractionReturn" type="xsd:double"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="multiplication">
+        <complexType>
+          <sequence>
+            <element name="first_parameter" type="xsd:double"/>
+            <element name="second_parameter" type="xsd:double"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="multiplicationResponse">
+        <complexType>
+          <sequence>
+            <element name="multiplicationReturn" type="xsd:double"/>
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="subtractionResponse">
+    <wsdl:part element="impl:subtractionResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="divisionRequest">
+    <wsdl:part element="impl:division" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="multiplicationResponse">
+    <wsdl:part element="impl:multiplicationResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="multiplicationRequest">
+    <wsdl:part element="impl:multiplication" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="divisionResponse">
+    <wsdl:part element="impl:divisionResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="additionRequest">
+    <wsdl:part element="impl:addition" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="additionResponse">
+    <wsdl:part element="impl:additionResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="subtractionRequest">
+    <wsdl:part element="impl:subtraction" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CalculatorWebServiceImpl">
+    <wsdl:operation name="addition">
+      <wsdl:input message="impl:additionRequest" name="additionRequest"></wsdl:input>
+      <wsdl:output message="impl:additionResponse" name="additionResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="division">
+      <wsdl:input message="impl:divisionRequest" name="divisionRequest"></wsdl:input>
+      <wsdl:output message="impl:divisionResponse" name="divisionResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="subtraction">
+      <wsdl:input message="impl:subtractionRequest" name="subtractionRequest"></wsdl:input>
+      <wsdl:output message="impl:subtractionResponse" name="subtractionResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="multiplication">
+      <wsdl:input message="impl:multiplicationRequest" name="multiplicationRequest"></wsdl:input>
+      <wsdl:output message="impl:multiplicationResponse" name="multiplicationResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CalculatorWebServiceImplSoapBinding" type="impl:CalculatorWebServiceImpl">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="addition">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="additionRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="additionResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="division">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="divisionRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="divisionResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="subtraction">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="subtractionRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="subtractionResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="multiplication">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="multiplicationRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="multiplicationResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CalculatorWebServiceImplService">
+    <wsdl:port binding="impl:CalculatorWebServiceImplSoapBinding" name="CalculatorWebServiceImpl">
+      <wsdlsoap:address location="http://localhost:8070/CalculatorWebService/services/CalculatorWebServiceImpl"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8070/CalculatorWebService/services/CalculatorWebServiceImpl</con:endpoint></con:endpoints><con:operation id="4e6ef364-e8cd-47c7-b4e4-69453bddf3df" isOneWay="false" action="" name="addition" bindingOperationName="addition" type="Request-Response" outputName="additionResponse" inputName="additionRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1461beb4-4ad4-460b-b230-52f197c507fb" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8070/CalculatorWebService/services/CalculatorWebServiceImpl</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://services.calculator.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:addition>
+         <ser:first_parameter>5</ser:first_parameter>
+         <ser:second_parameter>8</ser:second_parameter>
+      </ser:addition>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://services.calculator.com/CalculatorWebServiceImpl/additionRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="978a799f-a862-429d-bc61-97bcf15d0cce" isOneWay="false" action="" name="division" bindingOperationName="division" type="Request-Response" outputName="divisionResponse" inputName="divisionRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9aafd82e-9139-4db2-a580-4089167cf771" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8070/CalculatorWebService/services/CalculatorWebServiceImpl</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://services.calculator.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:division>
+         <ser:first_parameter>7</ser:first_parameter>
+         <ser:second_parameter>8</ser:second_parameter>
+      </ser:division>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://services.calculator.com/CalculatorWebServiceImpl/divisionRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="154e0b07-5305-49f2-9578-a1f30fc40701" isOneWay="false" action="" name="multiplication" bindingOperationName="multiplication" type="Request-Response" outputName="multiplicationResponse" inputName="multiplicationRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="db7d5bbd-7f76-4bb4-b79d-ba7085ac904a" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8070/CalculatorWebService/services/CalculatorWebServiceImpl</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://services.calculator.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:multiplication>
+         <ser:first_parameter>10</ser:first_parameter>
+         <ser:second_parameter>2</ser:second_parameter>
+      </ser:multiplication>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://services.calculator.com/CalculatorWebServiceImpl/multiplicationRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="a5c1bec9-cd4a-4d14-b223-0787894d059b" isOneWay="false" action="" name="subtraction" bindingOperationName="subtraction" type="Request-Response" outputName="subtractionResponse" inputName="subtractionRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="315df295-1e2a-45fd-90de-b9988788e580" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8070/CalculatorWebService/services/CalculatorWebServiceImpl</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://services.calculator.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:subtraction>
+         <ser:first_parameter>55</ser:first_parameter>
+         <ser:second_parameter>2.3</ser:second_parameter>
+      </ser:subtraction>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://services.calculator.com/CalculatorWebServiceImpl/subtractionRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

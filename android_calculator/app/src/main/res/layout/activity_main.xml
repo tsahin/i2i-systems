@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.webservice.calculator.MainActivity">
+
+        <TextView
+            android:text="First Number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="21dp"
+            android:id="@+id/textView"
+            android:textSize="20sp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/et_first_number"
+            android:layout_alignBottom="@+id/textView"
+            android:layout_alignLeft="@+id/et_second_number"
+            android:layout_alignStart="@+id/et_second_number" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/et_second_number"
+            android:layout_below="@+id/et_first_number"
+            android:layout_toRightOf="@+id/textView2"
+            android:layout_toEndOf="@+id/textView2"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp" />
+
+        <TextView
+            android:text="Second Number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:layout_alignBaseline="@+id/et_second_number"
+            android:layout_alignBottom="@+id/et_second_number"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="20sp" />
+
+        <TextView
+            android:text="Result:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:layout_alignTop="@+id/tv_result"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_marginTop="33dp"
+            android:id="@+id/tv_result"
+            android:layout_height="50dp"
+            android:layout_width="215dp"
+            android:textSize="20sp"
+            android:layout_below="@+id/et_second_number"
+            android:layout_alignLeft="@+id/et_second_number"
+            android:layout_alignStart="@+id/et_second_number" />
+
+    <Button
+        android:id="@+id/btn_topla"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_result"
+        android:layout_marginTop="18dp"
+        android:text="+"
+        android:layout_alignRight="@+id/textView4"
+        android:layout_alignEnd="@+id/textView4" />
+
+    <Button
+        android:id="@+id/btn_temizle"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="C"
+        android:layout_alignBaseline="@+id/btn_bol"
+        android:layout_alignBottom="@+id/btn_bol"
+        android:layout_alignRight="@+id/tv_result"
+        android:layout_alignEnd="@+id/tv_result"
+        android:layout_toRightOf="@+id/btn_bol"
+        android:layout_toEndOf="@+id/btn_bol" />
+
+    <Button
+        android:id="@+id/btn_bol"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="/"
+        android:layout_alignBaseline="@+id/btn_carp"
+        android:layout_alignBottom="@+id/btn_carp"
+        android:layout_toRightOf="@+id/btn_carp"
+        android:layout_toEndOf="@+id/btn_carp" />
+
+    <Button
+        android:id="@+id/btn_carp"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:layout_alignBaseline="@+id/btn_cikar"
+        android:layout_alignBottom="@+id/btn_cikar"
+        android:layout_toRightOf="@+id/btn_cikar"
+        android:layout_toEndOf="@+id/btn_cikar" />
+
+    <Button
+        android:id="@+id/btn_cikar"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:layout_alignBaseline="@+id/btn_topla"
+        android:layout_alignBottom="@+id/btn_topla"
+        android:layout_toRightOf="@+id/btn_topla"
+        android:layout_toEndOf="@+id/btn_topla" />
+    </RelativeLayout>
