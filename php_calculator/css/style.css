@@ -1,0 +1,81 @@
+.inner {
+  width: 90%;
+  margin: 20px 5%;
+  box-shadow: 0 4px 11px #ddd;
+  ;
+  border: 1px dashed #ddd;
+  overflow: hidden;
+
+}
+
+.inner .numberBlock {
+  float: left;
+  width: 70%;
+}
+
+.inner .numberBlock .number {}
+
+.inner .numberBlock .number > span {
+  float: left;
+  width: 30%;
+  text-align: center;
+  height: 40px;
+  /* background: #ff8319; */
+  line-height: 40px;border-bottom: 1px solid #ddd;
+}
+
+.inner .numberBlock .number > span + span {
+  width: 70%;
+}
+
+.inner .numberBlock .number > span + span > input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ddd;
+  font-size: 20px;
+}
+
+.inner .operationBlock {
+  float: left;
+  width: 30%;border-bottom: 3px solid #000;
+}
+
+.inner .operationBlock > span {
+  float: left;
+  width: 50%;
+  height: 40px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  position: relative;
+}
+.inner .operationBlock input:checked + label{background: #3aff77;}
+.inner .operationBlock input {
+  position: absolute;
+  width: 100%;
+  height: 39px;
+  left: 0;
+  top: 0;
+  margin: 0;
+  cursor: pointer;
+  z-index: 999;
+  opacity: 0;
+}
+
+.inner .operationBlock label {
+  width: 100%;
+  height: 39px;
+  background: #999;
+  color: #fff;
+  position: absolute;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  font-size: 30px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.inner .returnBlock{float: left;width: 100%;}
+.inner .returnBlock > span{height: 40px;display: block;float: left;width: 30%;background: #ff8319;}
+.inner .returnBlock > span > input{width: 100%;height: 40px;background: #000;color: #fff;font-size: 40px;border: 0;padding-bottom: 10px;line-height: 5px;}
+.inner .returnBlock > span + span{color: #fff;font-size: 30px;line-height: 40px;text-align: center;width: 70%;}
